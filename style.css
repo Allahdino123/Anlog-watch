@@ -1,0 +1,143 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: '\f019';
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #2f363e;
+}
+
+.container{
+    position: relative;
+    background-color: #2f363e;
+   /* min-height: 500px; */
+    border-radius: 20px;
+   border-top-left-radius: 225px;
+   border-top-right-radius: 225px;
+    box-shadow: 5px 25px 75px rgb(53, 49, 49),
+    10px 50px 70px rgba(68, 27, 27, 0.746),
+    inset 5px 5px 10px rgba(87, 49, 49, 0),
+    inset 5px 5px 20px rgb(75, 67, 67),
+    inset -5px -5px 15px rgb(53, 49, 49);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock{
+
+    position: relative;
+    width: 450px;
+    height: 450px;
+    background-color: #2f363e;
+    border-radius: 50%;
+    box-shadow: 10px 50px 70px rgba(68, 27, 27, 0.746),
+    inset 5px 5px 10px rgba(87, 49, 49, 0),
+    inset 5px 5px 20px rgb(75, 67, 67),
+    inset -5px -5px 15px rgb(53, 49, 49);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    
+}
+
+.clock::before{
+
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #2f363e;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    z-index: 10000;
+
+}
+
+.clock span
+{
+    position: absolute;
+    inset: 20px;
+    color: #fff;
+    text-align: center;
+    transform: rotate(calc(30deg*var(--i)));
+    /*360/12=30deg*/
+}
+
+.clock span b{
+    font-size: 2em;
+    opacity: 0.25;
+    display: inline-block;
+    font-weight: 600;
+   transform: rotate(calc(-30deg*var(--i)));
+}
+
+.circle
+{
+    position:absolute;
+    width: 300px;
+    height: 300px;
+    border: 2px solid rgba(122, 95, 95, 0.746);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 10;
+    
+}
+.circle i{
+position: absolute;
+width: 6px;
+height: 50%;
+background: var(--clr);
+opacity: 0.75;
+transform-origin: bottom;
+transform: scaleY(0.5);
+
+
+}
+
+.circle:nth-child(1) i{
+    width: 2px;
+}
+
+.circle:nth-child(2) i{
+    width: 6px;
+}
+
+.circle2
+{
+    width: 240px;
+    height: 240px;
+z-index: 9;
+}
+
+.circle3
+{
+    width: 180px;
+    height: 180px;  
+    z-index: 8;
+}
+
+
+.circle::before
+{
+    content: '';
+    position: absolute;
+    top: -8.5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--clr);
+    box-shadow: 0 0 20px var(--clr),
+    0 0 60px var(--clr);
+
+}
+
